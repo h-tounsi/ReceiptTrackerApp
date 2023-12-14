@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2 class="receipt-list-title container mt-5">Receipt List</h2>
+  <div class="container mt-5">
+    <form method="post" action="{% url 'receipt_delete_selected' %}">
+      {% csrf_token %}
+      <div class="row receipt-container">
+        {% for receipt in receipts %}
+          <div class="col-md-4 mb-3">
+            <div class="card p-3">
+              <input type="checkbox" name="receipts" value="{{ receipt.id }}" class="form-check-input select-checkbox" id="checkbox{{ receipt.id }}">
+              <label for="checkbox{{ receipt.id }}" class="custom-checkbox"></label>
+              <div class="receipt-info">
+                <p class="mb-0"><strong>Name of Store:</strong> {{ receipt.store_name }}</p>
+              </div>
+              <div class="receipt-actions mt-2">
+                <a href="{% url 'receipt_edit' receipt.id %}" class="action-link">Edit</a>
+                <a href="{% url 'receipt_detail' receipt.id %}" class="action-link">Show</a>
+                <a href="{% url 'receipt_delete' receipt.id %}" class="action-link">Delete</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <button type="submit" class="btn btn-danger delete-selected-btn">Delete Selected Items</button>
+    </form>
+  </div>
+{% endblock %}

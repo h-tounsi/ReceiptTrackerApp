@@ -1,0 +1,30 @@
+.auth-form {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  box-sizing: border-box;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.auth-link a {
+  text-decoration: underline;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+}
+
+button.btn-block {
+  width: 100%;
+}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <div class="edit-receipt-container bg-white p-4 rounded shadow">
+      <h2 class="edit-receipt-title text-primary">Edit Receipt</h2>
+      <form method="post" class="edit-receipt-form">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="store_name" class="form-label">Store Name:</label>
+          <input type="text" id="store_name" name="store_name" value="{{ form.store_name.value }}" class="form-control" placeholder="Enter store name">
+        </div>
+
+        
+        <div class="mb-3">
+          <label for="{{ form.date_of_purchase.id_for_label }}" class="form-label">Date of Purchase:</label>
+          {{ form.date_of_purchase }}
+        </div>
+    
+
+        <div class="mb-3">
+          <label for="item_list" class="form-label">Item List:</label>
+          <textarea id="item_list" name="item_list" class="form-control" placeholder="Enter item list">{{ form.item_list.value }}</textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="total_amount" class="form-label">Total Amount:</label>
+          <input type="text" id="total_amount" name="total_amount" value="{{ form.total_amount.value }}" pattern="[0-9]+" class="form-control" placeholder="Enter total amount">
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center">
+          <button type="submit" class="btn btn-success save-changes-btn">Save Changes</button>
+          <a href="{% url 'receipt_list' %}" class="btn btn-danger cancel-btn">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

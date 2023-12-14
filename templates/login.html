@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form method="post" class="card p-4 auth-form">
+          {% csrf_token %}
+          <h2 class="h2-title text-center mb-4">Login</h2>
+
+          {% if messages %}
+            <div class="alert alert-danger">
+                {% for message in messages %}
+                  {{ message }}
+                {% endfor %}
+            </div>
+          {% endif %}
+
+          <div class="mb-3">
+            <label for="{{ form.username.id_for_label }}" class="form-label">Username:</label>
+            <input type="text" id="{{ form.username.id_for_label }}" name="{{ form.username.name }}" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label for="{{ form.password.id_for_label }}" class="form-label">Password:</label>
+            <input type="password" id="{{ form.password.id_for_label }}" name="{{ form.password.name }}" class="form-control">
+          </div>
+
+          <div class="mb-3 text-center">
+            <button type="submit" class="btn btn-success btn-block">Login</button>
+          </div>
+          <div class="auth-link text-center mt-3">
+            <p>Don't have an account? <a href="{% url 'register' %}" class="text-success">Sign up here</a>.</p>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+{% endblock %}

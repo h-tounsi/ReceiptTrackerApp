@@ -1,0 +1,8 @@
+# .gitignore
+
+# Local development settings
+.env
+
+# Static files
+/static_root/
+
