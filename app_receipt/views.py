@@ -115,8 +115,6 @@ def receipt_edit(request, pk):
     else:
         form = ReceiptForm(instance=receipt)
     
-    print("Receipt Date:", receipt.date_of_purchase)  # Add this line for debugging
-    
     
     return render(request, 'receipt_edit.html', {'form': form})
 
