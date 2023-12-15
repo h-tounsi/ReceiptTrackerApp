@@ -29,7 +29,7 @@ This Django application allows users to manually enter and track their receipt i
     pip install -r requirements.txt  
 
 4. **Create MySQL Database:**
-    "Create a database with the name specified in the .env file, and update the MySQL username and password in the .env file accordingly."
+    - "Create a database with the name specified in the .env file, and update the MySQL username and password in the .env file accordingly."
 5. **Apply Database Migrations:**
     ```bash
     python manage.py makemigrations
@@ -56,7 +56,7 @@ This Django application allows users to manually enter and track their receipt i
 
 
 ### User Authentication
-The application includes user registration, login, and logout functionalities using Django's built-in User model. 
+- The application includes user **registration**, **login**, and **logout** functionalities using Django's built-in User model. 
 Users can only view and manage their own receipts.
 
 
