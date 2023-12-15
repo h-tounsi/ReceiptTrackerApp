@@ -3,7 +3,7 @@
 
 ## Overview
 
-This Django application allows users to manually enter and track their receipt information. It emphasizes basic CRUD operations (Create, Read, Update, Delete) and incorporates user authentication. The application utilizes MySQL as the database backend for storing receipt and user data.
+- This Django application allows users to manually enter and track their receipt information. It emphasizes basic CRUD operations (Create, Read, Update, Delete) and incorporates user authentication. The application utilizes MySQL as the database backend for storing receipt and user data.
 
 ## Requirements
 
@@ -64,7 +64,6 @@ Users can only view and manage their own receipts.
 
 - **Create Receipt:**
   - Users can manually enter and create a new receipt.
-  - 
 - **Edit Receipt:**
   - Users can modify the details of an existing receipt.
 
