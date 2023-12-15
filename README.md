@@ -1,4 +1,4 @@
-﻿# AppReceiptTracker
+﻿# ReceiptTrackerApp
 
 
 ## Overview
@@ -56,4 +56,4 @@ This Django application allows users to manually enter and track their receipt i
 The application includes user registration, login, and logout functionalities using Django's built-in User model. 
 Users can only view and manage their own receipts.
 
-# AppReceiptTracker
+
