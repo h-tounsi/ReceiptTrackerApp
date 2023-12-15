@@ -29,31 +29,25 @@ This Django application allows users to manually enter and track their receipt i
     pip install -r requirements.txt  
 
 4. **Create MySQL Database:**
-    Log in to MySQL ( enter your username and password of MySQL)
-    ```bash
-    mysql -u your_mysql_username -p
-5. **Create the database specified in NAME in the .env file**
-   ```bash
-    CREATE DATABASE your_database_name;
-    EXIT;
-6. **Apply Database Migrations:**
+    "Create a database with the name specified in the .env file, and update the MySQL username and password in the .env file accordingly."
+5. **Apply Database Migrations:**
     ```bash
     python manage.py makemigrations
     python manage.py migrate
-7. **Create a Superuser Account (for Admin Access):**
+6. **Create a Superuser Account (for Admin Access):**
     ```bash
     python manage.py createsuperuser
-8. **Collect Static Files:**
+7. **Collect Static Files:**
     ```bash
     python manage.py collectstatic
 
-9. **Run the Development Server:**
+8. **Run the Development Server:**
     ```bash
     python manage.py runserver
 
 ## Access the application at http://localhost:8000/.
 
-10. **Run Tests:**
+9. **Run Tests:**
     ```bash
     python manage.py test
 
