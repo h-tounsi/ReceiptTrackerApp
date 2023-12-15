@@ -57,3 +57,21 @@ The application includes user registration, login, and logout functionalities us
 Users can only view and manage their own receipts.
 
 
+### Receipt Management
+
+- [x] **Create Receipt:**
+  - Users can manually enter and create a new receipt.
+
+- [x] **Edit Receipt:**
+  - Users can modify the details of an existing receipt.
+
+- [x] **Show Receipt Details:**
+  - Users can view detailed information about a specific receipt.
+
+- [x] **Delete Receipt:**
+  - Users can delete a single receipt.
+
+- [x] **Delete Multiple Receipts:**
+  - Users can select and delete multiple receipts at once.
+
+
