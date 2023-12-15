@@ -5,10 +5,9 @@ from django.contrib.auth.forms import  AuthenticationForm
 from django.contrib.auth import login , authenticate , logout
 from .forms import ReceiptForm , UserCreationForm
 from django.contrib import messages 
-from django.http import Http404
 
 
-
+# Register view 
 def register_page(request):
     if request.user.is_authenticated:
         return redirect('receipt_list')
@@ -24,7 +23,7 @@ def register_page(request):
     return render(request, 'register.html', {'form': form})
 
 
-
+# Login view
 def login_page(request):
     if request.user.is_authenticated:
         return redirect('receipt_list')
@@ -47,7 +46,7 @@ def login_page(request):
     return render(request, 'login.html', {'form': form, 'messages': messages.get_messages(request)})
 
 
-
+# Logout view
 def logout_page(request):   
     logout(request)
     messages.success(request, f'You have been logged out.')
@@ -55,20 +54,21 @@ def logout_page(request):
 
 
 
-
+# Receipt views
 @login_required(login_url='login')
 def receipt_list(request):
     receipts = Receipt.objects.filter(user=request.user)
     return render(request, 'receipt_list.html', {'receipts': receipts})
 
 
-
+# Receipt delete views
 @login_required(login_url='login')
 def receipt_delete(request, pk):
     Receipt.objects.get(id=pk).delete()
     return redirect('receipt_list')
 
 
+# Receipt delete selected views
 @login_required(login_url='login')
 def receipt_delete_selected(request):
     if request.method == "POST":
@@ -77,13 +77,13 @@ def receipt_delete_selected(request):
     return redirect('receipt_list')
 
 
-
+# Receipt detail views
 @login_required(login_url='login')
 def receipt_detail(request, pk):
     receipt = Receipt.objects.get(id=pk)
     return render(request, 'receipt_detail.html', {'receipt': receipt})
 
-
+# Receipt new views
 @login_required(login_url='login')
 def receipt_new(request):
     if request.method == "POST":
@@ -97,12 +97,7 @@ def receipt_new(request):
         form = ReceiptForm()
     return render(request, 'receipt_new.html', {'form': form})
 
-
-
-
-
-
-
+# Receipt edit views
 @login_required(login_url='login')
 def receipt_edit(request, pk):
     receipt = Receipt.objects.get(pk=pk)

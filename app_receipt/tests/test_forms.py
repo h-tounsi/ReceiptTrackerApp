@@ -3,6 +3,8 @@ from app_receipt.forms import ReceiptForm, UserCreationForm
 
 class FormsTest(TestCase):
 
+
+    # ReceiptForm Test
     def test_receipt_form(self):
         form_data = {
             'store_name': 'Test Store',
@@ -12,8 +14,10 @@ class FormsTest(TestCase):
         }
         form = ReceiptForm(data=form_data)
 
+        # Check if form is valid
         self.assertTrue(form.is_valid())
 
+    # UserCreationForm Test
     def test_user_creation_form(self):
         form_data = {
             'username': 'testuser',
@@ -21,8 +25,7 @@ class FormsTest(TestCase):
             'password2': 'testpassword',
         }
         form = UserCreationForm(data=form_data)
-
+        # Check if form is valid
         self.assertTrue(form.is_valid())
 
-# Path: app_receipt/tests/test_urls.py
         

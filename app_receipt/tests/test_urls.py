@@ -1,8 +1,6 @@
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
-from app_receipt.views import register_page , login_page, logout_page, receipt_list , receipt_detail, receipt_new, receipt_edit, receipt_delete , receipt_delete_selected
-
-
+from app_receipt.views import *
 
 class TestUrls(SimpleTestCase):
 
