@@ -59,21 +59,15 @@
 - The application includes user **registration**, **login**, and **logout** functionalities using Django's built-in User model. 
 Users can only view and manage their own receipts.
 
-
 ### Receipt Management
 
 - **Create Receipt:**
   - Users can manually enter and create a new receipt.
 - **Edit Receipt:**
   - Users can modify the details of an existing receipt.
-
 - **Show Receipt Details:**
   - Users can view detailed information about a specific receipt.
-
 - **Delete Receipt:**
   - Users can delete a single receipt.
-
 - **Delete Multiple Receipts:**
   - Users can select and delete multiple receipts at once.
-
-
