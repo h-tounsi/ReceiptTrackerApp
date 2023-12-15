@@ -12,7 +12,7 @@ class ReceiptForm(forms.ModelForm):
         }
 
 
-class userCreationForm(UserCreationForm):
+class UserCreationForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'password1', 'password2']

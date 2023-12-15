@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Receipt 
 from django.contrib.auth.forms import  AuthenticationForm
 from django.contrib.auth import login , authenticate , logout
-from .forms import ReceiptForm , userCreationForm
+from .forms import ReceiptForm , UserCreationForm
 from django.contrib import messages 
 from django.http import Http404
 
@@ -13,14 +13,14 @@ def register_page(request):
     if request.user.is_authenticated:
         return redirect('receipt_list')
     if request.method == 'POST':
-        form = userCreationForm(request.POST)
+        form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Account created for {username}!')
             return redirect('login')
     else:
-        form = userCreationForm()
+        form = UserCreationForm()
     return render(request, 'register.html', {'form': form})
 
 
