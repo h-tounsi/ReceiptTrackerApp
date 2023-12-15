@@ -52,26 +52,29 @@ This Django application allows users to manually enter and track their receipt i
     python manage.py test
 
 
-## User Authentication
+## Functionalities
+
+
+### User Authentication
 The application includes user registration, login, and logout functionalities using Django's built-in User model. 
 Users can only view and manage their own receipts.
 
 
 ### Receipt Management
 
-- [x] **Create Receipt:**
+- **Create Receipt:**
   - Users can manually enter and create a new receipt.
-
-- [x] **Edit Receipt:**
+  - 
+- **Edit Receipt:**
   - Users can modify the details of an existing receipt.
 
-- [x] **Show Receipt Details:**
+- **Show Receipt Details:**
   - Users can view detailed information about a specific receipt.
 
-- [x] **Delete Receipt:**
+- **Delete Receipt:**
   - Users can delete a single receipt.
 
-- [x] **Delete Multiple Receipts:**
+- **Delete Multiple Receipts:**
   - Users can select and delete multiple receipts at once.
 
 
