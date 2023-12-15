@@ -23,7 +23,8 @@ This Django application allows users to manually enter and track their receipt i
 
 2. **Navigate to the Project Directory:**
     ```bash
-    cd django-receipt-tracker
+    cd ReceiptTracker
+    code .
 3. **Install Dependencies:**
     ```bash
     pip install -r requirements.txt  
