@@ -23,3 +23,6 @@ class FormsTest(TestCase):
         form = UserCreationForm(data=form_data)
 
         self.assertTrue(form.is_valid())
+
+# Path: app_receipt/tests/test_urls.py
+        
